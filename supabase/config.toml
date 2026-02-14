@@ -1,0 +1,7 @@
+project_id = "glknzzuuuqlkjerkroqi"
+
+[functions.analyze-github]
+verify_jwt = false
+
+[functions.analyze-architecture]
+verify_jwt = false
