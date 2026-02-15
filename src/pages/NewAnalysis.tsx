@@ -255,6 +255,14 @@ export default function NewAnalysis() {
         </motion.div>
       </AnimatePresence>
 
+      {/* Validation hints */}
+      {step === 2 && (sources.length === 0 || diagramTypes.length === 0) && (
+        <div className="mt-4 rounded-lg border border-warning/30 bg-warning/5 px-4 py-3 text-sm text-warning">
+          {sources.length === 0 && <p>⚠ Please go back and add at least one source (GitHub URL or file upload).</p>}
+          {diagramTypes.length === 0 && <p>⚠ Please select at least one diagram type.</p>}
+        </div>
+      )}
+
       {/* Navigation */}
       <div className="mt-6 flex justify-between">
         <Button variant="ghost" onClick={() => setStep((s) => s - 1)} disabled={step === 0}>
